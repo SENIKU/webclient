@@ -4,7 +4,7 @@ import CardMap from "./cardmap";
 import axios from "axios";
 
 const Content = () => {
-    const url = import.meta.env.VITE_API_URL + "/pertunjukan";
+    const url = import.meta.env.LINK_BACKEND + "/pertunjukan";
     const [data, setData] = useState([]);
     const getData = async () => {
         try {

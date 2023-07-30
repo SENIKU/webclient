@@ -18,7 +18,7 @@ const KontenDetail = () => {
     useEffect(() => {
 
         async function fetchData() {
-            const url = import.meta.env.VITE_API_URL + "/musik/" + `${id}`;
+            const url = import.meta.env.LINK_BACKEND + "/musik/" + `${id}`;
             try {
                 
               // You can use await to fetch data from your API
