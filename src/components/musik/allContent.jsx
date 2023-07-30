@@ -5,7 +5,7 @@ import axios from "axios";
 import CardMusik from "./cardMap";
 
 const ContentAll = () => {
-  const url = import.meta.env.LINK_BACKEND + "/musik";
+  const url = import.meta.env.VITE_BACKEND_URL + "/musik";
   const [data, setData] = useState([]);
   const getData = async () => {
       try {
