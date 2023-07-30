@@ -19,6 +19,7 @@ function Navigation() {
           <Nav.Link href="/" className='text-black btn-orange'>home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
+        
           <Nav.Link href="/pertunjukan" className='text-black btn-orange'>pertunjukan</Nav.Link>
         </Nav.Item>
         <Nav.Item>

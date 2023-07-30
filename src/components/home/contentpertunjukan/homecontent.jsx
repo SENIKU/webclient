@@ -4,7 +4,7 @@ import axios from "axios";
 import PertunjukanMaps from "./pertunjukanmaps";
 
 const HomeContent = () => {
-    const url = import.meta.env.VITE_API_URL + "/pertunjukan";
+    // const url = import.meta.env.VITE_API_URL + "/pertunjukan";
     const [data, setData] = useState([]);
     const getData = async () => {
         try {
