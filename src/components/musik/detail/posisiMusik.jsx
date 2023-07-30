@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { BsCaretRightFill } from "react-icons/bs";
 
-const Posisi = () => {
+const PosisiMusik = () => {
   
       
     return (
@@ -11,7 +11,7 @@ const Posisi = () => {
             <div className="">
             <Link to={"/"} className="link-2 mt-5 me-2 ">Home</Link>
             <span className="text-orange"><BsCaretRightFill /></span>
-            <Link to={"/pertunjukan"} className="link-2  ms-2">Pertunjukan</Link>
+            <Link to={"/Musik"} className="link-2  ms-2">Musik</Link>
             
             </div>
         </div>
@@ -20,5 +20,5 @@ const Posisi = () => {
 }
 
 
-export default Posisi;
+export default PosisiMusik;
 

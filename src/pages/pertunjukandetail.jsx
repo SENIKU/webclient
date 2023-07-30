@@ -8,7 +8,7 @@ const PertunjukanDetail = () => {
   return (
     <div>
         <Navigation />
-            <Detail />
+            <Detail className="bg-color-five" />
         <Footer />
     </div>
   );

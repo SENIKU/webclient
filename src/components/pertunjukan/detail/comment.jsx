@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
-import {  Card, Col, Image, Row } from "react-bootstrap";
+import {  Card, Col, Image, Row, Spinner } from "react-bootstrap";
 
 
 const Comment = () => {
@@ -39,7 +39,9 @@ const Comment = () => {
       // Make sure to check if detailData is not empty before rendering the content
       if (!Object.keys(detailData).length) {
         return <div className="mt-5"> 
-                 Loading...
+                 <Spinner animation="border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
                
               </div>;
       }

@@ -25,7 +25,7 @@ function Navigation() {
           <Nav.Link href="/musik" className='text-black btn-orange'>musik</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/kuis" className='text-black btn-orange'>Kuis</Nav.Link>
+          <Nav.Link href="/event" className='text-black btn-orange'>event</Nav.Link>
         </Nav.Item>
         
       </Nav>
