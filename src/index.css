@@ -10,12 +10,20 @@
   --secondary-color: #000000;
   --third-color: #9c9c9c;
   --four-color: #ffffff;
+  --five-color: #e7e7e7;
   --text-color: rgb(243, 200, 9);
   --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
   --rubik: "Rubik", sans-serif;
   --animate-delay: 0.1s;
 }
 
+.bg-color-five{
+  background-color: var(--five-color);
+}
+
+.bg-color-four{
+  background-color: var(--four-color);
+}
 .btn-color-white {
   background-color: var(--four-color);
 }
@@ -34,6 +42,9 @@ hr{
 }
 
 .text-orange{
+  color: #F1B100;
+}
+.text-orange:hover{
   color: #F1B100;
 }
 
@@ -90,7 +101,7 @@ hr{
 
 .link-2{
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1rem;
 }
 .link-2:hover{

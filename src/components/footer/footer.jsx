@@ -13,12 +13,12 @@ function Footer() {
         
         </Col>
         <Col xs={6} md={3}>
-         <h2 className='text-orange fs-bold'>SENIKU</h2>
+         <h2 className='text-orange fs-bold mb-3'>SENIKU</h2>
             <p className='text-orange'>seniku platform seputar 
                 tentang seni yang ada di indonesia</p>
         </Col>
         <Col xs={6} md={3}>
-        <h2 className='text-orange fs-bold'>About</h2>
+        <h2 className='text-orange mb-3 fs-bold'>About</h2>
             <Stack gap={3}>
             <div className="">
                 <Nav.Item>
@@ -38,7 +38,7 @@ function Footer() {
             </Stack>
         </Col>
         <Col xs={6} md={3}>
-        <h2 className='text-orange fs-bold'>Lainnya</h2>
+        <h2 className='text-orange fs-bold mb-3'>Lainnya</h2>
             <Stack gap={2}>
             <div className="">
                 <Nav.Item>

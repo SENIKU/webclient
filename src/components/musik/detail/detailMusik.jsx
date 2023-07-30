@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { Container } from 'react-bootstrap';
-import DetailKonten from './contentDetail';
-import Posisi from './posisi';
+import KontenDetail from './detail';
+import PosisiMusik from './posisiMusik';
 
-function Detail() {
+function DetailMusik() {
   return (
     <div className="">
         
         <Container className='bg-color-four '>
-        <Posisi  />
-        <DetailKonten />
+        <PosisiMusik />
+        <KontenDetail />
       </Container>
    </div>
   );
 }
 
-export default Detail;
+export default DetailMusik;

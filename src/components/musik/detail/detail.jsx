@@ -4,10 +4,10 @@ import axios from "axios";
 import { useParams } from 'react-router-dom';
 import { Badge } from "react-bootstrap";
 import { BsFillCalendarEventFill } from "react-icons/bs";
-import Comment from "./comment";
+// import Comment from "./comment";
 import Spinner from 'react-bootstrap/Spinner';
 
-const DetailKonten = () => {
+const KontenDetail = () => {
     const [detailData, setDetailData] = useState({});
    
     const { id } = useParams(); 
@@ -18,7 +18,7 @@ const DetailKonten = () => {
     useEffect(() => {
 
         async function fetchData() {
-            const url = import.meta.env.VITE_API_URL + "/pertunjukan/" + `${id}`;
+            const url = import.meta.env.VITE_API_URL + "/musik/" + `${id}`;
             try {
                 
               // You can use await to fetch data from your API
@@ -67,21 +67,29 @@ const DetailKonten = () => {
           {getFormattedDate(detailDate.created_at)}
 
         </div>
-        
-        <div>
-          <img src={detailData.image} alt={detailData.judul} className="img-fluid mb-5" width="100%"/>
-        </div>
 
         {detailData.content.split("\n").map((el, i) => (
                 <p key={i} className="text-justify">
                   {el}
                 </p>
-              ))}
+        ))} 
+        <h5 className="mt-5">Ciptaan:
+        </h5>
+        <p className="mt-3"> {detailData.ciptaan}</p>
+        <h5 className="mt-5">referensi:
+        </h5>
+        <a className="mt-3" href={detailData.referensi}> {detailData.referensi}</a>
+       
+       
         <iframe width="100%" height="600px" allow="fullscreen" src={detailData.linkyt} className='mt-5 mb-5'/>
-        <h5>referensi:</h5>
-        <a href={detailData.referensi} className="link-2"> {detailData.referensi}</a>
+        <h5 className="mb-4">Lirik:</h5>
+        {detailData.lyrics.split("\n").map((el, i) => (
+                <p key={i} className="text-justify">
+                  {el}
+                </p>
+              ))}
+       
         <div>
-        <Comment />
 
         </div>
       </div>
@@ -89,4 +97,4 @@ const DetailKonten = () => {
 }
 
 
-export default DetailKonten;
+export default KontenDetail;

@@ -1,9 +1,9 @@
 import { Col, Row, Spinner,} from "react-bootstrap";
 import { useEffect, useState } from "react";
-import CardMap from "./cardmap";
 import axios from "axios";
+import PertunjukanMaps from "./pertunjukanmaps";
 
-const Content = () => {
+const HomeContent = () => {
     const url = import.meta.env.VITE_API_URL + "/pertunjukan";
     const [data, setData] = useState([]);
     const getData = async () => {
@@ -30,11 +30,10 @@ const Content = () => {
     return (
         
         <div >
-            <h1 className="text-orange mb-2">Seni Pertunjukan</h1>
             <Row>
                 <Col>
-                <div className="edukasi-layout gap-4    g-4 content mt-lg-0 pt-5">
-                    <CardMap cards={data} />
+                <div className="edukasi-layout gap-4 g-4 content mt-lg-0 pt-5">
+                    <PertunjukanMaps cards={data} />
                 </div>
                 </Col>
             </Row>
@@ -43,4 +42,4 @@ const Content = () => {
     );
 }
 
-export default Content;
+export default HomeContent;
