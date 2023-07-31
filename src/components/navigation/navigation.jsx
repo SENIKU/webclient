@@ -1,6 +1,20 @@
+// import  { useEffect} from "react";
+// import { useSelector, useDispatch } from "react-redux";
 import { Nav, Container, Navbar, Button} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import { setLoginStatus } from '../../redux/store';
 
 function Navigation() {
+  // const isLoggedIn = useSelector((state) => state.cekLogin.isLoggedIn);
+  // const token = localStorage.getItem("token");
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   if (token) {
+  //     dispatch(setLoginStatus(true));
+  //   }
+  // }, []);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
       <Container>
@@ -30,10 +44,15 @@ function Navigation() {
         </Nav.Item>
         
       </Nav>
+      </Navbar.Collapse>
+       
+          <Navbar.Collapse id="basic-navbar-nav" className=" justify-content-end">
+        <Button variant="warning" className='text-white btn-white'><Link to={"/login"} className='text-white'>Login</Link></Button>{' '}
         </Navbar.Collapse>
-        <Navbar.Collapse id="basic-navbar-nav" className=" justify-content-end">
-        <Button variant="warning" className='text-white btn-white'>Login</Button>{' '}
-        </Navbar.Collapse>
+       
+       
+        
+
       </Container>
     </Navbar>
   );
