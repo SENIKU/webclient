@@ -13,7 +13,7 @@ const Comment = () => {
     useEffect(() => {
 
         async function fetchData() {
-            const url = import.meta.env.VITE_API_URL + "/pertunjukan/" + `${id}`;
+            const url = import.meta.env.VITE_BACKEND_URL + "/pertunjukan/" + `${id}`;
             try {
                 
               // You can use await to fetch data from your API
@@ -39,10 +39,10 @@ const Comment = () => {
       // Make sure to check if detailData is not empty before rendering the content
       if (!Object.keys(detailData).length) {
         return <div className="mt-5"> 
-                 <Spinner animation="border" role="status">
+                  <Spinner animation="border"  role="status" variant="warning">
                   <span className="visually-hidden">Loading...</span>
                 </Spinner>
-               
+                
               </div>;
       }
       

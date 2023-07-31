@@ -10,6 +10,8 @@ import Homepages from './pages/Homepages'
 import NotPages from './pages/notfoundpages'
 import MusikPages from './pages/MusikPages'
 import MusikDetailPages from './pages/detailMusik'
+import PagesRegister from './pages/registerpages'
+import PagesLogin from './pages/loginpages'
 
 
 function App() {
@@ -27,6 +29,10 @@ function App() {
         
             <Route path="/musik" element={<MusikPages />} />
             <Route path="/musik/:id" element={<MusikDetailPages />} />
+
+            {/* Authentication */}
+            <Route path="/register" element={<PagesRegister />} />
+            <Route path="/login" element={<PagesLogin />} />
 
             {/* Route for handling URL not found */}
             <Route path='*' element={<NotPages />} />
